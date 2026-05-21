@@ -29,7 +29,7 @@ async function initializeApp() {
   initRentalHub();
   initProgressTimeline();
   initMediaCenter();
-  initPreloader(); // Initialize preloader LAST - it hides after sections load
+  // initPreloader(); // Initialize preloader LAST - it hides after sections load
 }
 
 document.addEventListener('DOMContentLoaded', initializeApp);
@@ -135,18 +135,18 @@ function initSmoothScroll() {
 /* =============================================
    PRELOADER
    ============================================= */
-function initPreloader() {
-  const preloader = document.getElementById('preloader');
-  if (!preloader) return;
+// function initPreloader() {
+//   const preloader = document.getElementById('preloader');
+//   if (!preloader) return;
 
-  function hidePreloader() {
-    if (!preloader || preloader.classList.contains('fade-out')) return;
-    preloader.classList.add('fade-out');
-    setTimeout(() => { preloader.remove(); }, 700);
-  }
-  window.addEventListener('load', hidePreloader);
-  setTimeout(hidePreloader, 900);
-}
+//   function hidePreloader() {
+//     if (!preloader || preloader.classList.contains('fade-out')) return;
+//     preloader.classList.add('fade-out');
+//     setTimeout(() => { preloader.remove(); }, 700);
+//   }
+//   window.addEventListener('load', hidePreloader);
+//   setTimeout(hidePreloader, 900);
+// }
 
 /* =============================================
    STICKY NAVBAR
