@@ -1,4 +1,3 @@
-// Section Loader - Dynamically load HTML sections
 async function loadSections() {
   const sections = [
     { id: 'header-container', file: 'sections/header.html' },
@@ -13,31 +12,38 @@ async function loadSections() {
     { id: 'contact-container', file: 'sections/contact.html' }
   ];
 
-  try {
-    for (const section of sections) {
-      const response = await fetch(section.file);
-      if (!response.ok) throw new Error(`Failed to load ${section.file}`);
+  for (const section of sections) {
+    try {
+      const response = await fetch(`./${section.file}`);
+
+      if (!response.ok) {
+        console.warn(`Failed to load ${section.file}`);
+        continue;
+      }
+
       const html = await response.text();
+
       const container = document.getElementById(section.id);
+
       if (container) {
         container.innerHTML = html;
       }
+
+    } catch (error) {
+      console.error(`Error loading ${section.file}:`, error);
     }
-  } catch (error) {
-    console.error(`Error loading sections:`, error);
-  } finally {
-    // Hide preloader after all sections are loaded
-    const preloader = document.getElementById('preloader');
-    if (preloader) {
-      preloader.classList.add('fade-out');
-      setTimeout(() => {
-        preloader.style.display = 'none';
-      }, 600);
-    }
+  }
+
+  // ALWAYS remove preloader
+  const preloader = document.getElementById('preloader');
+
+  if (preloader) {
+    preloader.classList.add('fade-out');
+
+    setTimeout(() => {
+      preloader.remove();``
+    }, 600);
   }
 }
 
-// Load sections when DOM is ready
-document.addEventListener('DOMContentLoaded', () => {
-  loadSections();
-});
+document.addEventListener('DOMContentLoaded', loadSections);
