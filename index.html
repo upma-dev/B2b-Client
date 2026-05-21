@@ -22,35 +22,1321 @@
   </div> -->
 
   <!-- Header & Navigation (sections/header.html) -->
-  <div id="header-container"></div>
+ <!-- Header & Navigation -->
+<header class="header" id="header">
+  <a href="#" class="logo">
+    Urban<span class="logo-accent">.</span><span
+      style="font-size: 0.75rem; color: var(--text-muted); margin-left: 10px; font-weight: 500; font-family: var(--font-body); letter-spacing: 1.5px; text-transform: uppercase;">Partner
+      Portal</span>
+  </a>
+
+  <nav>
+    <ul class="nav-links" id="nav-links">
+      <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+      <li class="nav-item dropdown">
+        <a href="#projects" class="nav-link">Portfolio</a>
+        <ul class="dropdown-menu">
+          <li class="dropdown-item"><a href="#projects" onclick="showProjectDetails(0)"><span
+                class="dropdown-item-title">Vert Zayed</span><span class="dropdown-item-desc">Premium boutique villas in
+                New Zayed</span></a></li>
+          <li class="dropdown-item"><a href="#projects" onclick="showProjectDetails(1)"><span
+                class="dropdown-item-title">Zayard Villa</span><span class="dropdown-item-desc">Luxury standalone
+                signature homes</span></a></li>
+          <li class="dropdown-item"><a href="#projects" onclick="showProjectDetails(2)"><span
+                class="dropdown-item-title">Zayard Elite</span><span class="dropdown-item-desc">Exclusive
+                state-of-the-art estates</span></a></li>
+          <li class="dropdown-item"><a href="#projects" onclick="showProjectDetails(3)"><span
+                class="dropdown-item-title">Zayard Residence</span><span class="dropdown-item-desc">Elegant contemporary
+                apartments</span></a></li>
+          <li class="dropdown-item"><a href="#projects" onclick="showProjectDetails(4)"><span
+                class="dropdown-item-title">Zayard Avenue</span><span class="dropdown-item-desc">Premium mixed-use
+                retail & housing</span></a></li>
+          <li class="dropdown-item"><a href="#projects" onclick="showProjectDetails(5)"><span
+                class="dropdown-item-title">Zayard North Strike</span><span class="dropdown-item-desc">Magnificent
+                coastal luxury living</span></a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a href="#calculator" class="nav-link">Yield Calculator</a></li>
+      <li class="nav-item"><a href="#rental-hub" class="nav-link">Rental Hub</a></li>
+      <li class="nav-item"><a href="#progress" class="nav-link">Progress Tracker</a></li>
+      <li class="nav-item"><a href="#media-center" class="nav-link">Media Kits</a></li>
+      <li class="nav-item"><a href="#jv-partners" class="nav-link">JV Partners</a></li>
+      <li class="nav-item"><a href="#contact" class="btn btn-primary"
+          style="padding: 8px 20px; font-size: 0.75rem;">Register Agency</a></li>
+    </ul>
+  </nav>
+
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
 
   <!-- Hero Section (sections/hero.html) -->
-  <div id="hero-container"></div>
+ <!-- Hero Section -->
+<section class="hero" id="home">
+  <div class="hero-slider" id="hero-slider">
+    <!-- Slide 1: Slides Left to Right -->
+    <div class="hero-slide active">
+      <div class="hero-slide-bg slide-left" style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80');"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content-wrapper">
+        <div class="hero-subtitle">Institutional Real Estate Development</div>
+        <h1 class="hero-title">High-Yield Joint Ventures & Broker Networks</h1>
+        <div class="hero-buttons">
+          <a href="#calculator" class="btn btn-primary">Calculate Commission</a>
+          <div class="play-btn-wrapper" id="open-video-btn">
+            <div class="play-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+            <span class="play-text">Corporate Presentation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 2: Slides Top to Down -->
+    <div class="hero-slide">
+      <div class="hero-slide-bg slide-top" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80');"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content-wrapper">
+        <div class="hero-subtitle">High-End Residential Portfolios</div>
+        <h1 class="hero-title">Exclusive Land Bank Opportunities in Sheikh Zayed</h1>
+        <div class="hero-buttons">
+          <a href="#jv-partners" class="btn btn-primary">Submit JV Proposal</a>
+          <div class="play-btn-wrapper" id="open-video-btn-2">
+            <div class="play-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+            <span class="play-text">Zayed Expansion Plan</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 3: Slides Right to Left -->
+    <div class="hero-slide">
+      <div class="hero-slide-bg slide-right" style="background-image: url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1920&q=80');"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content-wrapper">
+        <div class="hero-subtitle">Seamless Marketing Support</div>
+        <h1 class="hero-title">White-Label Digital Assets & CAD Floorplans</h1>
+        <div class="hero-buttons">
+          <a href="#media-center" class="btn btn-primary">Broker Media Center</a>
+          <div class="play-btn-wrapper" id="open-video-btn-3">
+            <div class="play-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+            <span class="play-text">Broker Portal Tutorial</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dots navigation -->
+  <div class="slider-dots" id="slider-dots">
+    <div class="slider-dot active" data-slide="0"></div>
+    <div class="slider-dot" data-slide="1"></div>
+    <div class="slider-dot" data-slide="2"></div>
+  </div>
+
+  <!-- Scroll Indicator -->
+  <div class="scroll-indicator">
+    <div class="mouse-icon">
+      <div class="mouse-wheel"></div>
+    </div>
+    <span>Scroll Down</span>
+  </div>
+</section>
+
 
   <!-- Stats Section (sections/stats.html) -->
-  <div id="stats-container"></div>
+ <!-- Stats Counter Section -->
+<section class="section bg-darker home-only-section" id="home-stats">
+  <div class="stats-grid">
+    <div class="stat-card reveal-item">
+      <div class="stat-number" data-target="15">0</div>
+      <div class="stat-label">Years Developer Track Record</div>
+    </div>
+    <div class="stat-card reveal-item">
+      <div class="stat-number" data-target="240">0</div>
+      <div class="stat-label">Acres Premium Land Bank</div>
+    </div>
+    <div class="stat-card reveal-item">
+      <div class="stat-number" data-target="85">0</div>
+      <div class="stat-label">% Institutional Re-investment</div>
+    </div>
+    <div class="stat-card reveal-item">
+      <div class="stat-number" data-target="450">0</div>
+      <div class="stat-label">Registered Broker Agencies</div>
+    </div>
+  </div>
+</section>
 
   <!-- Projects Section (sections/projects.html) -->
-  <div id="projects-container"></div>
+ <!-- Projects Showcase Section -->
+<section class="section bg-lighter" id="projects">
+  <div class="section-title reveal-item">
+    <p>Developer Holdings</p>
+    <h2>Corporate Investment Portfolio</h2>
+    <div class="divider"></div>
+  </div>
+
+  <div class="projects-container">
+    <div class="projects-slider-wrapper">
+      <div class="projects-track" id="projects-track">
+        <!-- Project Card 1 -->
+        <div class="project-card reveal-item" onclick="showProjectDetails(0)">
+          <div class="project-card-bg" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=500&q=80');"></div>
+          <div class="project-card-overlay"></div>
+          <div class="project-card-content">
+            <div class="project-location">New Zayed</div>
+            <h3 class="project-name">Vert Zayed</h3>
+            <p class="project-excerpt">Boutique luxury green residential development tailored for premium family settings, featuring signature architecture and lush gardens.</p>
+            <div class="project-arrow">
+              <span>Invest Details</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 2 -->
+        <div class="project-card reveal-item" onclick="showProjectDetails(1)">
+          <div class="project-card-bg" style="background-image: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=500&q=80');"></div>
+          <div class="project-card-overlay"></div>
+          <div class="project-card-content">
+            <div class="project-location">New Zayed</div>
+            <h3 class="project-name">Zayard Villa</h3>
+            <p class="project-excerpt">Signature standalone smart homes with private swimming pools, architectural green terraces, and elegant double-height lounges.</p>
+            <div class="project-arrow">
+              <span>Invest Details</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 3 -->
+        <div class="project-card reveal-item" onclick="showProjectDetails(2)">
+          <div class="project-card-bg" style="background-image: url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=500&q=80');"></div>
+          <div class="project-card-overlay"></div>
+          <div class="project-card-content">
+            <div class="project-location">New Zayed</div>
+            <h3 class="project-name">Zayard Elite</h3>
+            <p class="project-excerpt">High-end limited edition estates providing ultimate levels of privacy, smart home infrastructure, and sprawling private gardens.</p>
+            <div class="project-arrow">
+              <span>Invest Details</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 4 -->
+        <div class="project-card reveal-item" onclick="showProjectDetails(3)">
+          <div class="project-card-bg" style="background-image: url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=500&q=80');"></div>
+          <div class="project-card-overlay"></div>
+          <div class="project-card-content">
+            <div class="project-location">New Zayed</div>
+            <h3 class="project-name">Zayard Residence</h3>
+            <p class="project-excerpt">Elegantly engineered low-rise apartments surrounded by green parks, cycling trails, and fully featured clubhouse facilities.</p>
+            <div class="project-arrow">
+              <span>Invest Details</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 5 -->
+        <div class="project-card reveal-item" onclick="showProjectDetails(4)">
+          <div class="project-card-bg" style="background-image: url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=500&q=80');"></div>
+          <div class="project-card-overlay"></div>
+          <div class="project-card-content">
+            <div class="project-location">New Zayed</div>
+            <h3 class="project-name">Zayard Avenue</h3>
+            <p class="project-excerpt">A premium shopping and living destination along Sheikh Zayed's main avenue corridors, featuring world-class shopping brands.</p>
+            <div class="project-arrow">
+              <span>Invest Details</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 6 -->
+        <div class="project-card reveal-item" onclick="showProjectDetails(5)">
+          <div class="project-card-bg" style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=500&q=80');"></div>
+          <div class="project-card-overlay"></div>
+          <div class="project-card-content">
+            <div class="project-location">North Coast</div>
+            <h3 class="project-name">Zayard North Strike</h3>
+            <p class="project-excerpt">An absolute oceanfront community offering beachside villas, infinity water bodies, and pristine summer residences.</p>
+            <div class="project-arrow">
+              <span>Invest Details</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="projects-nav">
+      <button class="nav-arrow" id="project-prev" aria-label="Previous project">
+        <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+      </button>
+      <button class="nav-arrow" id="project-next" aria-label="Next project">
+        <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
 
   <!-- Calculator Section (sections/calculator.html) -->
-  <div id="calculator-container"></div>
+<!-- Interactive Broker Yield & Commission Calculator -->
+<section class="section bg-darker" id="calculator">
+  <div class="section-title reveal-item">
+    <p>Brokerage Projections</p>
+    <h2>Brokerage Commissions & Sales Calculator</h2>
+    <div class="divider"></div>
+  </div>
+
+  <div class="calculator-grid glass-panel reveal-item">
+    <div class="calculator-sliders">
+      <h3>Adjust Partnership Metrics</h3>
+      <p style="color: var(--text-muted); margin-bottom: 2rem;">Adjust the projected broker sales volume and commission agreements to see payouts and annual yield metrics calculated in real-time.</p>
+      
+      <div class="slider-group">
+        <div class="slider-labels">
+          <span class="slider-title">Projected Annual Sales Volume</span>
+          <span class="slider-value-display" id="volume-val">EGP 25,000,000</span>
+        </div>
+        <input type="range" id="volume-range" min="5000000" max="100000000" step="5000000" value="25000000" class="partner-range-slider">
+        <div class="range-limits">
+          <span>EGP 5M</span>
+          <span>EGP 100M</span>
+        </div>
+      </div>
+
+      <div class="slider-group" style="margin-top: 2rem;">
+        <div class="slider-labels">
+          <span class="slider-title">Agreed Commission Tier</span>
+          <span class="slider-value-display" id="commission-val">2.5%</span>
+        </div>
+        <input type="range" id="commission-range" min="1.5" max="5.0" step="0.1" value="2.5" class="partner-range-slider">
+        <div class="range-limits">
+          <span>1.5%</span>
+          <span>5.0%</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="calculator-results">
+      <div class="radial-chart-wrapper">
+        <svg class="radial-svg" viewBox="0 0 160 160">
+          <circle class="radial-bg" cx="80" cy="80" r="70"></circle>
+          <circle class="radial-bar" id="radial-progress" cx="80" cy="80" r="70"></circle>
+        </svg>
+        <div class="radial-content">
+          <span class="radial-label">Projected Payout</span>
+          <span class="radial-number" id="payout-val">EGP 625K</span>
+        </div>
+      </div>
+
+      <div class="results-meta">
+        <div class="meta-item">
+          <span class="meta-label">Commission Bracket</span>
+          <span class="meta-value" id="bracket-val" style="color: var(--accent);">Silver Tier</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Est. Marketing Rebate</span>
+          <span class="meta-value" id="rebate-val">EGP 50,000</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 
   <!-- Rental Hub Section (sections/rental-hub.html) -->
-  <div id="rental-container"></div>
+<!-- Rental Yield & Leasing Hub Section -->
+<section class="section bg-darker" id="rental-hub">
+  <div class="section-title reveal-item">
+    <p>Income Diversification</p>
+    <h2>Rental Yield & Leasing Hub</h2>
+    <div class="divider"></div>
+  </div>
+
+  <div class="rental-hub-container">
+    <!-- Rental Income Calculator -->
+    <div class="rental-calculator glass-panel reveal-item">
+      <h3>Rental Income Calculator</h3>
+      <p style="color: var(--text-muted); margin-bottom: 2rem;">Calculate your annual rental yield based on property value and expected rental returns.</p>
+      
+      <div class="slider-group">
+        <div class="slider-labels">
+          <span class="slider-title">Property Value (EGP)</span>
+          <span class="slider-value-display" id="property-val">EGP 5,000,000</span>
+        </div>
+        <input type="range" id="property-range" min="1000000" max="50000000" step="1000000" value="5000000" class="partner-range-slider">
+        <div class="range-limits">
+          <span>EGP 1M</span>
+          <span>EGP 50M</span>
+        </div>
+      </div>
+
+      <div class="slider-group" style="margin-top: 2rem;">
+        <div class="slider-labels">
+          <span class="slider-title">Expected Rental Yield (%)</span>
+          <span class="slider-value-display" id="yield-val">6.5%</span>
+        </div>
+        <input type="range" id="yield-range" min="3" max="12" step="0.5" value="6.5" class="partner-range-slider">
+        <div class="range-limits">
+          <span>3%</span>
+          <span>12%</span>
+        </div>
+      </div>
+
+      <div class="rental-results">
+        <div class="rental-result-card">
+          <span class="result-label">Monthly Rental Income</span>
+          <span class="result-value" id="monthly-rental">EGP 27,083</span>
+        </div>
+        <div class="rental-result-card">
+          <span class="result-label">Annual Rental Income</span>
+          <span class="result-value" id="annual-rental">EGP 325,000</span>
+        </div>
+        <div class="rental-result-card">
+          <span class="result-label">3-Year Projection</span>
+          <span class="result-value" id="three-year-rental">EGP 975,000</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Available Properties for Lease -->
+    <div class="rental-properties-section reveal-item">
+      <h3>Available Properties for Lease</h3>
+      <p style="color: var(--text-muted); margin-bottom: 2rem;">Explore premium properties with verified rental yield potential.</p>
+      
+      <div class="rental-properties-grid" id="rental-properties-grid">
+        <!-- Dynamically generated property cards -->
+      </div>
+    </div>
+
+    <!-- Lease Request Form (Building Rental/Lease Feature) -->
+    <div class="lease-request-panel glass-panel reveal-item">
+      <h3>Submit Lease Request</h3>
+      <p style="color: var(--text-muted); margin-bottom: 2rem;">Register your property for rental opportunities or submit tenant inquiries.</p>
+      
+      <form id="lease-request-form" class="lease-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="lease-property">Property Name</label>
+            <input type="text" id="lease-property" placeholder="e.g., Zayard Villa, Unit A101" required>
+          </div>
+          <div class="form-group">
+            <label for="lease-type">Lease Type</label>
+            <select id="lease-type" required>
+              <option value="">Select type...</option>
+              <option value="short-term">Short-Term (1-6 months)</option>
+              <option value="long-term">Long-Term (6+ months)</option>
+              <option value="furnished">Furnished</option>
+              <option value="unfurnished">Unfurnished</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="lease-amount">Monthly Rental Amount (EGP)</label>
+            <input type="number" id="lease-amount" placeholder="Enter monthly rent" required>
+          </div>
+          <div class="form-group">
+            <label for="lease-contact">Contact Email</label>
+            <input type="email" id="lease-contact" placeholder="your@email.com" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="lease-notes">Additional Details</label>
+          <textarea id="lease-notes" placeholder="Property features, tenant requirements, etc." rows="4"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Submit Lease Request</button>
+      </form>
+
+      <div id="lease-form-message" style="display: none; margin-top: 1rem; padding: 1rem; border-radius: 8px; text-align: center;"></div>
+    </div>
+  </div>
+</section>
+
 
   <!-- Progress Section (sections/progress.html) -->
-  <div id="progress-container"></div>
+<!-- Interactive Construction Progress Timeline Section -->
+<section class="section bg-lighter" id="progress">
+  <div class="section-title reveal-item">
+    <p>Execution Transparency</p>
+    <h2>Construction Progress Milestones</h2>
+    <div class="divider"></div>
+  </div>
+
+  <div class="progress-section-container reveal-item">
+    <!-- Selector for different projects progress -->
+    <div class="progress-project-tabs">
+      <div class="progress-tab active" data-proj="0">Vert Zayed Construction</div>
+      <div class="progress-tab" data-proj="1">Zayard Villa Construction</div>
+      <div class="progress-tab" data-proj="2">Zayard Residence Construction</div>
+    </div>
+
+    <div class="progress-detail-layout glass-panel">
+      <div class="progress-info-side">
+        <h3 id="progress-project-name">Vert Zayed Progress</h3>
+        <p id="progress-project-desc" style="color: var(--text-muted); margin-bottom: 2rem;">Timeline of structural, concrete, and finishing stages of the Vert boutique community. Audited quarterly for institutional partners.</p>
+        
+        <div class="overall-progress-bar">
+          <div class="overall-progress-labels">
+            <span>Overall Completion Status</span>
+            <span id="overall-percentage" style="color: var(--accent); font-weight: bold;">72%</span>
+          </div>
+          <div class="bar-bg">
+            <div class="bar-fill" id="overall-bar-fill" style="width: 72%;"></div>
+          </div>
+        </div>
+
+        <div class="timeline-nodes-container" id="timeline-nodes-list">
+          <!-- Dynamically populated timeline nodes -->
+        </div>
+      </div>
+
+      <div class="progress-image-side">
+        <div class="progress-image-wrapper">
+          <img id="progress-photo" src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&q=80" alt="Construction Site" class="progress-photo-img">
+          <div class="progress-photo-overlay">
+            <span id="progress-photo-caption">Concrete structural skeleton pouring in zone B</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
   <!-- Media Center Section (sections/media-center.html) -->
-  <div id="media-container"></div>
+<!-- Interactive Broker Media Center Dashboard -->
+<section class="section bg-darker" id="media-center">
+  <div class="section-title reveal-item">
+    <p>White-Label Resources</p>
+    <h2>Broker Media Center</h2>
+    <div class="divider"></div>
+  </div>
+
+  <div class="media-center-container glass-panel reveal-item">
+    <div class="media-controls">
+      <div class="search-input-wrapper">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="search-icon"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="asset-search" class="media-search-field" placeholder="Search brochures, plans, renders...">
+      </div>
+      <select id="asset-filter" class="media-select-field">
+        <option value="all">All Properties</option>
+        <option value="vert">Vert Zayed</option>
+        <option value="villa">Zayard Villa</option>
+        <option value="elite">Zayard Elite</option>
+        <option value="residence">Zayard Residence</option>
+        <option value="strike">Zayard North Strike</option>
+        <option value="avenue">Zayard Avenue</option>
+      </select>
+    </div>
+
+    <div class="media-grid-header">
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <input type="checkbox" id="select-all-assets" class="partner-checkbox">
+        <span>Select All Files</span>
+      </div>
+      <span id="selected-count-label" style="color: var(--text-muted); font-size: 0.85rem;">0 files selected</span>
+    </div>
+
+    <div class="media-asset-grid" id="media-asset-grid">
+      <!-- Media Assets Grid -->
+      <div class="media-card" style="cursor: pointer; transition: all 0.3s ease;">
+        <div class="media-card-thumb" style="background: linear-gradient(135deg, #E5C158, #D4A940); height: 150px; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" style="width: 40px; height: 40px;"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        </div>
+        <div class="media-card-info" style="padding: 1rem;">
+          <h4 style="font-size: 0.95rem; margin-bottom: 0.5rem;">Vert Zayed Brochure</h4>
+          <p style="font-size: 0.8rem; color: var(--text-muted);">PDF • 12 MB</p>
+        </div>
+      </div>
+
+      <div class="media-card" style="cursor: pointer; transition: all 0.3s ease;">
+        <div class="media-card-thumb" style="background: linear-gradient(135deg, #164E33, #0A2F1D); height: 150px; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" style="width: 40px; height: 40px;"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        </div>
+        <div class="media-card-info" style="padding: 1rem;">
+          <h4 style="font-size: 0.95rem; margin-bottom: 0.5rem;">Floor Plans CAD</h4>
+          <p style="font-size: 0.8rem; color: var(--text-muted);">ZIP • 8.5 MB</p>
+        </div>
+      </div>
+
+      <div class="media-card" style="cursor: pointer; transition: all 0.3s ease;">
+        <div class="media-card-thumb" style="background: linear-gradient(135deg, #8A9D94, #5A7A70); height: 150px; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" style="width: 40px; height: 40px;"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        </div>
+        <div class="media-card-info" style="padding: 1rem;">
+          <h4 style="font-size: 0.95rem; margin-bottom: 0.5rem;">3D Renders Package</h4>
+          <p style="font-size: 0.8rem; color: var(--text-muted);">ZIP • 45 MB</p>
+        </div>
+      </div>
+
+      <div class="media-card" style="cursor: pointer; transition: all 0.3s ease;">
+        <div class="media-card-thumb" style="background: linear-gradient(135deg, #F3D372, #E5C158); height: 150px; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" style="width: 40px; height: 40px;"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        </div>
+        <div class="media-card-info" style="padding: 1rem;">
+          <h4 style="font-size: 0.95rem; margin-bottom: 0.5rem;">Marketing Presentations</h4>
+          <p style="font-size: 0.8rem; color: var(--text-muted);">PPTX • 15 MB</p>
+        </div>
+      </div>
+
+      <div class="media-card" style="cursor: pointer; transition: all 0.3s ease;">
+        <div class="media-card-thumb" style="background: linear-gradient(135deg, #0A2F1D, #164E33); height: 150px; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" style="width: 40px; height: 40px;"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        </div>
+        <div class="media-card-info" style="padding: 1rem;">
+          <h4 style="font-size: 0.95rem; margin-bottom: 0.5rem;">Specification Sheets</h4>
+          <p style="font-size: 0.8rem; color: var(--text-muted);">PDF • 6 MB</p>
+        </div>
+      </div>
+
+      <div class="media-card" style="cursor: pointer; transition: all 0.3s ease;">
+        <div class="media-card-thumb" style="background: linear-gradient(135deg, #070F0B, #1E2E26); height: 150px; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" style="width: 40px; height: 40px;"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        </div>
+        <div class="media-card-info" style="padding: 1rem;">
+          <h4 style="font-size: 0.95rem; margin-bottom: 0.5rem;">Video Commercials</h4>
+          <p style="font-size: 0.8rem; color: var(--text-muted);">MP4 • 120 MB</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="media-download-footer">
+      <div class="download-progress-bar-wrapper" id="download-progress-wrapper" style="display: none;">
+        <div class="download-progress-label">Compiling White-Label ZIP Package... <span id="download-progress-pct">0%</span></div>
+        <div class="download-bar-bg">
+          <div class="download-bar-fill" id="download-bar-fill"></div>
+        </div>
+      </div>
+      <button class="btn btn-primary" id="download-selected-btn" style="width: 100%;">Download Selected Assets</button>
+    </div>
+  </div>
+</section>
 
   <!-- JV Partners Section (sections/jv-partners.html) -->
-  <div id="jv-container"></div>
+<!-- Joint Venture & Agency Partners Section -->
+<section class="section bg-darker" id="jv-partners">
+  <div class="section-title reveal-item" style="text-align: center; margin-bottom: 3rem;">
+    <p>Strategic Alliances</p>
+    <h2>Partner With Us</h2>
+    <div class="divider" style="margin: 1rem auto;"></div>
+    <div class="partner-tabs">
+      <button class="partner-tab active" data-tab="jv-tab-content">Joint Ventures</button>
+      <button class="partner-tab" data-tab="agency-tab-content">Agency & Brokers</button>
+    </div>
+  </div>
 
+  <div class="jv-grid partner-content active" id="jv-tab-content">
+    <div class="jv-info reveal-item">
+      <h3>Land Owner Partnerships</h3>
+      <p>We welcome land owners and strategic partners for joint-development opportunities. Tell us about your parcel and preferred partnership structure — our acquisitions team will evaluate fit and reach out.</p>
+
+      <div class="jv-cards">
+        <div class="jv-card glass-panel staggered-item">
+          <div class="jv-card-icon">🤝</div>
+          <h4>Flexible Models</h4>
+          <p style="color:var(--text-muted); font-size: 0.9rem;">Co-development, land-for-equity, and profit-share options.</p>
+        </div>
+        <div class="jv-card glass-panel staggered-item">
+          <div class="jv-card-icon">⚡</div>
+          <h4>Fast Evaluation</h4>
+          <p style="color:var(--text-muted); font-size: 0.9rem;">Preliminary response within 48 hours for qualified submissions.</p>
+        </div>
+        <div class="jv-card glass-panel staggered-item">
+          <div class="jv-card-icon">🏢</div>
+          <h4>Dedicated Team</h4>
+          <p style="color:var(--text-muted); font-size: 0.9rem;">Executive land acquisition and commercial structuring support.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="jv-contact-card glass-panel reveal-item scale-in">
+      <h4 style="margin-bottom:0.5rem;">JV Quick Submission</h4>
+      <p style="color: var(--text-muted); margin-bottom: 1rem; font-size: 0.9rem;">Provide core details and an executive will follow up for next steps.</p>
+      <form id="jvForm" class="animated-form">
+        <div class="form-group">
+          <input type="text" id="ownerName" class="form-input" placeholder=" " required minlength="3">
+          <label for="ownerName" class="form-label">Owner Name *</label>
+        </div>
+        <div class="form-group">
+          <input type="text" id="landLocation" class="form-input" placeholder=" " required>
+          <label for="landLocation" class="form-label">Land Location *</label>
+        </div>
+        <div class="form-group">
+          <input type="text" id="landArea" class="form-input" placeholder=" " required>
+          <label for="landArea" class="form-label">Land Area (sqm) *</label>
+        </div>
+        <div class="form-group">
+          <input type="email" id="jvEmail" class="form-input" placeholder=" " required>
+          <label for="jvEmail" class="form-label">Email *</label>
+        </div>
+        <div class="form-group">
+          <input type="tel" id="jvPhone" class="form-input" placeholder=" " required>
+          <label for="jvPhone" class="form-label">Phone *</label>
+        </div>
+        <button type="submit" class="btn btn-primary pulse-btn" style="width:100%; margin-top:8px;">Submit JV Proposal</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="jv-grid partner-content" id="agency-tab-content" style="display: none;">
+    <div class="jv-info">
+      <h3>Certified Agency Network</h3>
+      <p>Join our elite network of brokers and real estate agencies. Gain access to exclusive inventory, advanced marketing tools, and industry-leading commission structures.</p>
+
+      <div class="jv-cards">
+        <div class="jv-card glass-panel">
+          <div class="jv-card-icon">💎</div>
+          <h4>Premium Inventory</h4>
+          <p style="color:var(--text-muted); font-size: 0.9rem;">Early access to launches and exclusive off-market units.</p>
+        </div>
+        <div class="jv-card glass-panel">
+          <div class="jv-card-icon">📈</div>
+          <h4>Top Commissions</h4>
+          <p style="color:var(--text-muted); font-size: 0.9rem;">Tiered commission structures rewarding high-performing partners.</p>
+        </div>
+        <div class="jv-card glass-panel">
+          <div class="jv-card-icon">🛠️</div>
+          <h4>Broker Tools</h4>
+          <p style="color:var(--text-muted); font-size: 0.9rem;">Dedicated portal for leads, collateral, and performance tracking.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="jv-contact-card glass-panel">
+      <h4 style="margin-bottom:0.5rem;">Agency Registration</h4>
+      <p style="color: var(--text-muted); margin-bottom: 1rem; font-size: 0.9rem;">Apply to become a certified broker partner today.</p>
+      <form id="agencyForm" class="animated-form">
+        <div class="form-group">
+          <input type="text" id="agencyName" class="form-input" placeholder=" " required>
+          <label for="agencyName" class="form-label">Agency Name *</label>
+        </div>
+        <div class="form-group">
+          <input type="text" id="brokerName" class="form-input" placeholder=" " required>
+          <label for="brokerName" class="form-label">Primary Broker Name *</label>
+        </div>
+        <div class="form-group">
+          <input type="email" id="agencyEmail" class="form-input" placeholder=" " required>
+          <label for="agencyEmail" class="form-label">Corporate Email *</label>
+        </div>
+        <div class="form-group">
+          <input type="tel" id="agencyPhone" class="form-input" placeholder=" " required>
+          <label for="agencyPhone" class="form-label">Phone *</label>
+        </div>
+        <div class="form-group">
+          <input type="text" id="commercialReg" class="form-input" placeholder=" " required>
+          <label for="commercialReg" class="form-label">Commercial Registration No. *</label>
+        </div>
+        <button type="submit" class="btn btn-primary pulse-btn" style="width:100%; margin-top:8px;">Apply Now</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<style>
+  .partner-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .partner-tab {
+    background: transparent;
+    border: 1px solid rgba(229, 193, 88, 0.3);
+    color: var(--text-white);
+    padding: 10px 24px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .partner-tab.active, .partner-tab:hover {
+    background: var(--accent);
+    color: var(--bg-dark);
+    border-color: var(--accent);
+    box-shadow: 0 4px 15px rgba(229, 193, 88, 0.3);
+  }
+
+  .jv-grid {
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+    animation: fadeIn 0.5s ease;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .jv-grid > * { min-width: 0; }
+  .jv-contact-card { box-sizing: border-box; min-width: 0; }
+
+  .jv-info h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(90deg, #fff, var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .jv-cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.2rem;
+    margin: 2rem 0;
+  }
+
+  @media (min-width: 680px) {
+    .jv-cards { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  .jv-card {
+    padding: 24px 20px;
+    border-radius: 12px;
+    background: linear-gradient(145deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+    border: 1px solid rgba(229,193,88,0.1);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-align: center;
+  }
+  
+  .jv-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(229,193,88,0.15);
+    border-color: rgba(229,193,88,0.3);
+  }
+  
+  .jv-card-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0px); }
+  }
+
+  .jv-contact-card {
+    padding: 30px;
+    border-radius: 16px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01));
+    border: 1px solid rgba(229,193,88,0.15);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .jv-contact-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 4px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  }
+
+  .scale-in {
+    animation: scaleIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  }
+  
+  @keyframes scaleIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  .animated-form .form-group {
+    transition: all 0.3s ease;
+  }
+  
+  .animated-form .form-input:focus {
+    background: rgba(229, 193, 88, 0.03);
+    padding-left: 10px;
+  }
+
+  .pulse-btn {
+    transition: all 0.3s ease;
+  }
+  
+  .pulse-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(229, 193, 88, 0.5);
+  }
+
+  @media (max-width: 900px) {
+    .jv-grid { grid-template-columns: 1fr; }
+  }
+</style>
+
+<script>
+  // Tab switching logic
+  document.querySelectorAll('.partner-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.partner-tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      
+      const targetId = tab.getAttribute('data-tab');
+      document.querySelectorAll('.partner-content').forEach(content => {
+        content.style.display = 'none';
+        content.classList.remove('active');
+      });
+      
+      const activeContent = document.getElementById(targetId);
+      activeContent.style.display = 'grid';
+      // Small timeout to allow display:grid to apply before adding animation class
+      setTimeout(() => activeContent.classList.add('active'), 10);
+    });
+  });
+
+  document.getElementById('jvForm')?.addEventListener('submit', function(e){
+    e.preventDefault();
+    const btn = this.querySelector('button');
+    const originalText = btn.innerText;
+    btn.innerText = 'Sending...';
+    btn.style.opacity = '0.7';
+    
+    setTimeout(() => {
+      alert('Thank you — your JV proposal has been recorded. Our team will contact you.');
+      this.reset();
+      btn.innerText = originalText;
+      btn.style.opacity = '1';
+    }, 800);
+  });
+  
+  document.getElementById('agencyForm')?.addEventListener('submit', function(e){
+    e.preventDefault();
+    const btn = this.querySelector('button');
+    const originalText = btn.innerText;
+    btn.innerText = 'Sending...';
+    btn.style.opacity = '0.7';
+    
+    setTimeout(() => {
+      alert('Thank you for applying. Our agency relations team will review your registration.');
+      this.reset();
+      btn.innerText = originalText;
+      btn.style.opacity = '1';
+    }, 800);
+  });
+</script>
   <!-- Contact Section (sections/contact.html) -->
-  <div id="contact-container"></div>
+<!-- Lead Form & Contact Section -->
+<section class="section bg-darker" id="contact" style="position: relative; overflow: hidden;">
+  <!-- Background decorative elements -->
+  <div class="bg-shape shape-1"></div>
+  <div class="bg-shape shape-2"></div>
+
+  <div class="contact-grid">
+    <div class="contact-info reveal-item">
+      <h3 class="gradient-text">Institutional Registration</h3>
+      <p>Submit a strategic partnership proposal, and an executive director will respond shortly.</p>
+      
+      <div class="contact-cards">
+        <div class="contact-card glass-panel hover-float">
+          <div class="contact-icon pulse-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="contact-body">
+            <h4>Partner Desk</h4>
+            <p>Sheikh Zayed City, Egypt</p>
+          </div>
+        </div>
+
+        <div class="contact-card glass-panel hover-float" style="animation-delay: 0.1s;">
+          <div class="contact-icon pulse-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          </div>
+          <div class="contact-body">
+            <h4>Support</h4>
+            <p><a href="tel:16831" style="color: var(--accent); text-decoration: none; font-weight: bold;">16831</a></p>
+          </div>
+        </div>
+
+        <div class="contact-card glass-panel hover-float" style="animation-delay: 0.2s;">
+          <div class="contact-icon pulse-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div class="contact-body">
+            <h4>Email</h4>
+            <p><a href="mailto:partners@urbanlease.com" style="color: var(--accent); text-decoration: none;">partners@urbanlease.com</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="map-container glass-panel reveal-item" style="margin-top: 2rem;">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110532.88582046467!2d29.91684074823528!3d30.03254924778119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458469235565f3f%3A0x58523f8bc48f8afb!2sSheikh%20Zayed%20City%2C%20Giza%20Governorate%2C%20Egypt!5e0!3m2!1sen!2sus!4v1716301321453!5m2!1sen!2sus" 
+          width="100%" 
+          height="250" 
+          style="border:0; border-radius: 8px; filter: grayscale(1) invert(0.9) hue-rotate(180deg);" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+
+    <div class="lead-form-wrapper glass-panel reveal-item slide-in-right">
+      <div class="form-message" id="form-msg" style="display: none; background: rgba(229, 193, 88, 0.1); border: 1px solid var(--accent); padding: 1rem; border-radius: 12px; margin-bottom: 1.5rem; color: var(--accent); text-align: center; font-weight: 500;">Thank you! Your proposal was recorded.</div>
+      
+      <div class="form-header">
+        <div class="pulse-dot"></div>
+        <h3 style="margin: 0; font-size: 1.6rem;">Partnership Form</h3>
+      </div>
+      <p style="color: var(--text-muted); margin-bottom: 2.5rem; font-size: 0.95rem; line-height: 1.5;">Submit your details below to join our exclusive network of institutional partners and brokers.</p>
+      
+      <form id="leadForm" class="interactive-form">
+        <div class="form-group">
+          <input type="text" id="fullName" class="form-input" placeholder=" " required minlength="4">
+          <label for="fullName" class="form-label">Contact Executive Name</label>
+        </div>
+        <div class="form-group">
+          <input type="text" id="companyName" class="form-input" placeholder=" " required minlength="4">
+          <label for="companyName" class="form-label">Agency / Corporation Name</label>
+        </div>
+        <div class="form-group">
+          <input type="tel" id="phone" class="form-input" placeholder=" " required pattern="[0-9]{8,15}">
+          <label for="phone" class="form-label">Direct Phone Number</label>
+        </div>
+        <div class="form-group">
+          <input type="email" id="email" class="form-input" placeholder=" " required>
+          <label for="email" class="form-label">Corporate Email</label>
+        </div>
+        <div class="form-group select-group">
+          <select id="partnershipSelect" class="form-input" required>
+            <option value="" disabled selected hidden></option>
+            <option value="broker">Certified Agency Registration</option>
+            <option value="investor">Institutional Investment Inquiry</option>
+            <option value="corporate">Corporate Bulk Buyer</option>
+          </select>
+          <label for="partnershipSelect" class="form-label">Partnership Interest</label>
+          <svg class="select-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <button type="submit" class="btn btn-primary submit-btn">
+          <span>Submit Inquiry</span>
+          <svg class="btn-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Decorative Shapes */
+  .bg-shape {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: 0;
+    opacity: 0.15;
+  }
+  .shape-1 {
+    width: 300px; height: 300px;
+    background: var(--accent);
+    top: -100px; left: -100px;
+    animation: drift 20s infinite alternate;
+  }
+  .shape-2 {
+    width: 400px; height: 400px;
+    background: #4a90e2;
+    bottom: -150px; right: -150px;
+    animation: drift 25s infinite alternate-reverse;
+  }
+  @keyframes drift {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(50px, 50px) scale(1.1); }
+  }
+
+  .contact-grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: start;
+  }
+
+  .gradient-text {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(90deg, #fff, var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .contact-info p {
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    font-size: 1.05rem;
+  }
+
+  .contact-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .contact-card {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    padding: 20px 24px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.01));
+    border: 1px solid rgba(229, 193, 88, 0.15);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    backdrop-filter: blur(10px);
+  }
+
+  .hover-float {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  .hover-float:hover {
+    transform: translateX(10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+    border-color: rgba(229, 193, 88, 0.4);
+    background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+  }
+
+  .contact-icon {
+    flex-shrink: 0;
+    width: 56px; height: 56px;
+    background: rgba(229, 193, 88, 0.1);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--accent);
+    border: 1px solid rgba(229, 193, 88, 0.2);
+  }
+  
+  .hover-float:hover .pulse-icon {
+    animation: iconPulse 1s infinite;
+  }
+  
+  @keyframes iconPulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(229, 193, 88, 0.4); }
+    70% { transform: scale(1.1); box-shadow: 0 0 0 10px rgba(229, 193, 88, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(229, 193, 88, 0); }
+  }
+
+  .contact-body h4 { font-size: 0.95rem; margin-bottom: 0.2rem; }
+  .contact-body p { font-size: 0.85rem; margin: 0; color: var(--text-muted); }
+
+  .map-container {
+    padding: 10px;
+    border-radius: 12px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01));
+    border: 1px solid rgba(229,193,88,0.15);
+    transition: transform 0.4s ease;
+  }
+  .map-container:hover {
+    transform: scale(1.02);
+  }
+
+  .slide-in-right {
+    animation: slideInRight 0.8s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+  }
+  @keyframes slideInRight {
+    from { opacity: 0; transform: translateX(50px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  /* Redesigned Premium Lead Form */
+  .lead-form-wrapper {
+    padding: 45px 40px;
+    border-radius: 24px;
+    background: linear-gradient(145deg, rgba(25, 28, 26, 0.95), rgba(12, 15, 13, 0.98));
+    border: 1px solid rgba(229, 193, 88, 0.2);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.1);
+    backdrop-filter: blur(20px);
+  }
+
+  .form-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+  }
+  
+  .pulse-dot {
+    width: 10px; height: 10px;
+    background: var(--accent);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--accent);
+    animation: dotPulse 2s infinite;
+  }
+  
+  @keyframes dotPulse {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(229, 193, 88, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(229, 193, 88, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(229, 193, 88, 0); }
+  }
+
+  .form-group {
+    position: relative;
+    margin-bottom: 1.8rem;
+  }
+
+  .form-input {
+    width: 100%;
+    padding: 16px 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: var(--text-white);
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-sizing: border-box;
+  }
+  
+  .form-input:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .form-input:focus {
+    background: rgba(229, 193, 88, 0.03);
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px rgba(229, 193, 88, 0.1);
+  }
+
+  .form-label {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    color: var(--text-muted);
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    background: transparent;
+  }
+
+  /* Floating label active states */
+  .form-input:focus ~ .form-label,
+  .form-input:not(:placeholder-shown) ~ .form-label {
+    top: 0;
+    transform: translateY(-50%) scale(0.85);
+    left: 12px;
+    color: var(--accent);
+    background: #141715; /* Matches gradient background approximately */
+    padding: 0 8px;
+    border-radius: 4px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+  
+  /* Select styling */
+  .select-group { position: relative; }
+  .select-group select {
+    appearance: none;
+    cursor: pointer;
+    background-color: rgba(255,255,255,0.03); /* Override for select */
+  }
+  .select-group select option {
+    background: var(--bg-dark);
+    color: var(--text-white);
+    padding: 10px;
+  }
+  .select-icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    pointer-events: none;
+    transition: color 0.3s ease;
+  }
+  .select-group select:focus ~ .select-icon {
+    color: var(--accent);
+  }
+
+  .submit-btn {
+    width: 100%;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 12px;
+    margin-top: 2rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    background: var(--accent);
+    color: var(--bg-dark);
+    border: none;
+  }
+  
+  .submit-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 30px rgba(229, 193, 88, 0.3);
+    background: #f0cc6b; /* Lighter accent */
+  }
+
+  .btn-icon {
+    transition: transform 0.3s ease;
+  }
+  
+  .submit-btn:hover .btn-icon {
+    transform: translateX(5px) scale(1.1);
+  }
+
+  @media (max-width: 900px) {
+    .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .contact-cards { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+    .lead-form-wrapper { padding: 35px 25px; }
+  }
+  
+  @media (max-width: 480px) {
+    .lead-form-wrapper { padding: 30px 20px; }
+    .form-input { font-size: 0.95rem; }
+    .submit-btn { font-size: 1rem; }
+  }
+</style>
+
+<script>
+  document.getElementById('leadForm')?.addEventListener('submit', function(e){
+    e.preventDefault();
+    const msg = document.getElementById('form-msg');
+    const btn = this.querySelector('button');
+    const originalContent = btn.innerHTML;
+    
+    btn.innerHTML = '<span>Processing...</span>';
+    btn.style.opacity = '0.7';
+    
+    setTimeout(() => {
+      msg.style.display = 'block';
+      msg.style.animation = 'slideInRight 0.5s ease';
+      this.reset();
+      btn.innerHTML = originalContent;
+      btn.style.opacity = '1';
+      
+      setTimeout(() => {
+        msg.style.display = 'none';
+      }, 5000);
+    }, 1000);
+  });
+</script>
 
   <!-- Floor Plans Section -->
   <section class="section bg-lighter" id="floorplans">
