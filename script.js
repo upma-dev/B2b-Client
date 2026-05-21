@@ -20,11 +20,16 @@ document.addEventListener('DOMContentLoaded', () => {
 function initPreloader() {
   const preloader = document.getElementById('preloader');
   if (!preloader) return;
-  
+
   window.addEventListener('load', () => {
+
+    preloader.classList.add('fade-out');
+
     setTimeout(() => {
-      preloader.classList.add('fade-out');
-    }, 600); // Elegant luxury delay
+      preloader.style.display = 'none';
+      preloader.remove();
+    }, 500);
+
   });
 }
 

@@ -120,8 +120,7 @@ a {
 /* Glassmorphism Classes */
 .glass-panel {
   background: var(--glass-bg);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+ background: rgba(10,47,29,0.88);
   border: 1px solid var(--glass-border);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
 }
@@ -234,8 +233,8 @@ a {
 
 .header.scrolled {
   padding: 15px 50px;
-  background: rgba(7, 15, 11, 0.85);
-  backdrop-filter: blur(20px);
+ background: rgba(10,47,29,0.92); background: rgba(7, 15, 11, 0.85);
+  
   border-bottom: 1px solid rgba(229, 193, 88, 0.1);
 }
 
@@ -2309,4 +2308,11 @@ a {
   .progress-tab {
     text-align: center;
   }
+}
+.hero-slide,
+.hero-slide-bg,
+.preloader {
+  will-change: auto;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
