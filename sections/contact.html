@@ -1,0 +1,403 @@
+<!-- Lead Form & Contact Section -->
+<section class="section bg-darker" id="contact" style="position: relative; overflow: hidden;">
+  <!-- Background decorative elements -->
+  <div class="bg-shape shape-1"></div>
+  <div class="bg-shape shape-2"></div>
+
+  <div class="contact-grid">
+    <div class="contact-info reveal-item">
+      <h3 class="gradient-text">Institutional Registration</h3>
+      <p>Submit a strategic partnership proposal, and an executive director will respond shortly.</p>
+      
+      <div class="contact-cards">
+        <div class="contact-card glass-panel hover-float">
+          <div class="contact-icon pulse-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="contact-body">
+            <h4>Partner Desk</h4>
+            <p>Sheikh Zayed City, Egypt</p>
+          </div>
+        </div>
+
+        <div class="contact-card glass-panel hover-float" style="animation-delay: 0.1s;">
+          <div class="contact-icon pulse-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          </div>
+          <div class="contact-body">
+            <h4>Support</h4>
+            <p><a href="tel:16831" style="color: var(--accent); text-decoration: none; font-weight: bold;">16831</a></p>
+          </div>
+        </div>
+
+        <div class="contact-card glass-panel hover-float" style="animation-delay: 0.2s;">
+          <div class="contact-icon pulse-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div class="contact-body">
+            <h4>Email</h4>
+            <p><a href="mailto:partners@urbanlease.com" style="color: var(--accent); text-decoration: none;">partners@urbanlease.com</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="map-container glass-panel reveal-item" style="margin-top: 2rem;">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110532.88582046467!2d29.91684074823528!3d30.03254924778119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458469235565f3f%3A0x58523f8bc48f8afb!2sSheikh%20Zayed%20City%2C%20Giza%20Governorate%2C%20Egypt!5e0!3m2!1sen!2sus!4v1716301321453!5m2!1sen!2sus" 
+          width="100%" 
+          height="250" 
+          style="border:0; border-radius: 8px; filter: grayscale(1) invert(0.9) hue-rotate(180deg);" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+
+    <div class="lead-form-wrapper glass-panel reveal-item slide-in-right">
+      <div class="form-message" id="form-msg" style="display: none; background: rgba(229, 193, 88, 0.1); border: 1px solid var(--accent); padding: 1rem; border-radius: 12px; margin-bottom: 1.5rem; color: var(--accent); text-align: center; font-weight: 500;">Thank you! Your proposal was recorded.</div>
+      
+      <div class="form-header">
+        <div class="pulse-dot"></div>
+        <h3 style="margin: 0; font-size: 1.6rem;">Partnership Form</h3>
+      </div>
+      <p style="color: var(--text-muted); margin-bottom: 2.5rem; font-size: 0.95rem; line-height: 1.5;">Submit your details below to join our exclusive network of institutional partners and brokers.</p>
+      
+      <form id="leadForm" class="interactive-form">
+        <div class="form-group">
+          <input type="text" id="fullName" class="form-input" placeholder=" " required minlength="4">
+          <label for="fullName" class="form-label">Contact Executive Name</label>
+        </div>
+        <div class="form-group">
+          <input type="text" id="companyName" class="form-input" placeholder=" " required minlength="4">
+          <label for="companyName" class="form-label">Agency / Corporation Name</label>
+        </div>
+        <div class="form-group">
+          <input type="tel" id="phone" class="form-input" placeholder=" " required pattern="[0-9]{8,15}">
+          <label for="phone" class="form-label">Direct Phone Number</label>
+        </div>
+        <div class="form-group">
+          <input type="email" id="email" class="form-input" placeholder=" " required>
+          <label for="email" class="form-label">Corporate Email</label>
+        </div>
+        <div class="form-group select-group">
+          <select id="partnershipSelect" class="form-input" required>
+            <option value="" disabled selected hidden></option>
+            <option value="broker">Certified Agency Registration</option>
+            <option value="investor">Institutional Investment Inquiry</option>
+            <option value="corporate">Corporate Bulk Buyer</option>
+          </select>
+          <label for="partnershipSelect" class="form-label">Partnership Interest</label>
+          <svg class="select-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <button type="submit" class="btn btn-primary submit-btn">
+          <span>Submit Inquiry</span>
+          <svg class="btn-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Decorative Shapes */
+  .bg-shape {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: 0;
+    opacity: 0.15;
+  }
+  .shape-1 {
+    width: 300px; height: 300px;
+    background: var(--accent);
+    top: -100px; left: -100px;
+    animation: drift 20s infinite alternate;
+  }
+  .shape-2 {
+    width: 400px; height: 400px;
+    background: #4a90e2;
+    bottom: -150px; right: -150px;
+    animation: drift 25s infinite alternate-reverse;
+  }
+  @keyframes drift {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(50px, 50px) scale(1.1); }
+  }
+
+  .contact-grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: start;
+  }
+
+  .gradient-text {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(90deg, #fff, var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .contact-info p {
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    font-size: 1.05rem;
+  }
+
+  .contact-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .contact-card {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    padding: 20px 24px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.01));
+    border: 1px solid rgba(229, 193, 88, 0.15);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    backdrop-filter: blur(10px);
+  }
+
+  .hover-float {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  .hover-float:hover {
+    transform: translateX(10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+    border-color: rgba(229, 193, 88, 0.4);
+    background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+  }
+
+  .contact-icon {
+    flex-shrink: 0;
+    width: 56px; height: 56px;
+    background: rgba(229, 193, 88, 0.1);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--accent);
+    border: 1px solid rgba(229, 193, 88, 0.2);
+  }
+  
+  .hover-float:hover .pulse-icon {
+    animation: iconPulse 1s infinite;
+  }
+  
+  @keyframes iconPulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(229, 193, 88, 0.4); }
+    70% { transform: scale(1.1); box-shadow: 0 0 0 10px rgba(229, 193, 88, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(229, 193, 88, 0); }
+  }
+
+  .contact-body h4 { font-size: 0.95rem; margin-bottom: 0.2rem; }
+  .contact-body p { font-size: 0.85rem; margin: 0; color: var(--text-muted); }
+
+  .map-container {
+    padding: 10px;
+    border-radius: 12px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01));
+    border: 1px solid rgba(229,193,88,0.15);
+    transition: transform 0.4s ease;
+  }
+  .map-container:hover {
+    transform: scale(1.02);
+  }
+
+  .slide-in-right {
+    animation: slideInRight 0.8s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+  }
+  @keyframes slideInRight {
+    from { opacity: 0; transform: translateX(50px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  /* Redesigned Premium Lead Form */
+  .lead-form-wrapper {
+    padding: 45px 40px;
+    border-radius: 24px;
+    background: linear-gradient(145deg, rgba(25, 28, 26, 0.95), rgba(12, 15, 13, 0.98));
+    border: 1px solid rgba(229, 193, 88, 0.2);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.1);
+    backdrop-filter: blur(20px);
+  }
+
+  .form-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+  }
+  
+  .pulse-dot {
+    width: 10px; height: 10px;
+    background: var(--accent);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--accent);
+    animation: dotPulse 2s infinite;
+  }
+  
+  @keyframes dotPulse {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(229, 193, 88, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(229, 193, 88, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(229, 193, 88, 0); }
+  }
+
+  .form-group {
+    position: relative;
+    margin-bottom: 1.8rem;
+  }
+
+  .form-input {
+    width: 100%;
+    padding: 16px 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: var(--text-white);
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-sizing: border-box;
+  }
+  
+  .form-input:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .form-input:focus {
+    background: rgba(229, 193, 88, 0.03);
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px rgba(229, 193, 88, 0.1);
+  }
+
+  .form-label {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    color: var(--text-muted);
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    background: transparent;
+  }
+
+  /* Floating label active states */
+  .form-input:focus ~ .form-label,
+  .form-input:not(:placeholder-shown) ~ .form-label {
+    top: 0;
+    transform: translateY(-50%) scale(0.85);
+    left: 12px;
+    color: var(--accent);
+    background: #141715; /* Matches gradient background approximately */
+    padding: 0 8px;
+    border-radius: 4px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+  
+  /* Select styling */
+  .select-group { position: relative; }
+  .select-group select {
+    appearance: none;
+    cursor: pointer;
+    background-color: rgba(255,255,255,0.03); /* Override for select */
+  }
+  .select-group select option {
+    background: var(--bg-dark);
+    color: var(--text-white);
+    padding: 10px;
+  }
+  .select-icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    pointer-events: none;
+    transition: color 0.3s ease;
+  }
+  .select-group select:focus ~ .select-icon {
+    color: var(--accent);
+  }
+
+  .submit-btn {
+    width: 100%;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 12px;
+    margin-top: 2rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    background: var(--accent);
+    color: var(--bg-dark);
+    border: none;
+  }
+  
+  .submit-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 30px rgba(229, 193, 88, 0.3);
+    background: #f0cc6b; /* Lighter accent */
+  }
+
+  .btn-icon {
+    transition: transform 0.3s ease;
+  }
+  
+  .submit-btn:hover .btn-icon {
+    transform: translateX(5px) scale(1.1);
+  }
+
+  @media (max-width: 900px) {
+    .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .contact-cards { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+    .lead-form-wrapper { padding: 35px 25px; }
+  }
+  
+  @media (max-width: 480px) {
+    .lead-form-wrapper { padding: 30px 20px; }
+    .form-input { font-size: 0.95rem; }
+    .submit-btn { font-size: 1rem; }
+  }
+</style>
+
+<script>
+  document.getElementById('leadForm')?.addEventListener('submit', function(e){
+    e.preventDefault();
+    const msg = document.getElementById('form-msg');
+    const btn = this.querySelector('button');
+    const originalContent = btn.innerHTML;
+    
+    btn.innerHTML = '<span>Processing...</span>';
+    btn.style.opacity = '0.7';
+    
+    setTimeout(() => {
+      msg.style.display = 'block';
+      msg.style.animation = 'slideInRight 0.5s ease';
+      this.reset();
+      btn.innerHTML = originalContent;
+      btn.style.opacity = '1';
+      
+      setTimeout(() => {
+        msg.style.display = 'none';
+      }, 5000);
+    }, 1000);
+  });
+</script>

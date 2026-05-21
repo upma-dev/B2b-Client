@@ -1,0 +1,107 @@
+<!-- Interactive Broker Media Center Dashboard -->
+<section class="section bg-darker" id="media-center">
+  <div class="section-title reveal-item">
+    <p>White-Label Resources</p>
+    <h2>Broker Media Center</h2>
+    <div class="divider"></div>
+  </div>
+
+  <div class="media-center-container glass-panel reveal-item">
+    <div class="media-controls">
+      <div class="search-input-wrapper">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="search-icon"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="asset-search" class="media-search-field" placeholder="Search brochures, plans, renders...">
+      </div>
+      <select id="asset-filter" class="media-select-field">
+        <option value="all">All Properties</option>
+        <option value="vert">Vert Zayed</option>
+        <option value="villa">Zayard Villa</option>
+        <option value="elite">Zayard Elite</option>
+        <option value="residence">Zayard Residence</option>
+        <option value="strike">Zayard North Strike</option>
+        <option value="avenue">Zayard Avenue</option>
+      </select>
+    </div>
+
+    <div class="media-grid-header">
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <input type="checkbox" id="select-all-assets" class="partner-checkbox">
+        <span>Select All Files</span>
+      </div>
+      <span id="selected-count-label" style="color: var(--text-muted); font-size: 0.85rem;">0 files selected</span>
+    </div>
+
+    <div class="media-asset-grid" id="media-asset-grid">
+      <!-- Media Assets Grid -->
+      <div class="media-card" style="cursor: pointer; transition: all 0.3s ease;">
+        <div class="media-card-thumb" style="background: linear-gradient(135deg, #E5C158, #D4A940); height: 150px; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" style="width: 40px; height: 40px;"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        </div>
+        <div class="media-card-info" style="padding: 1rem;">
+          <h4 style="font-size: 0.95rem; margin-bottom: 0.5rem;">Vert Zayed Brochure</h4>
+          <p style="font-size: 0.8rem; color: var(--text-muted);">PDF • 12 MB</p>
+        </div>
+      </div>
+
+      <div class="media-card" style="cursor: pointer; transition: all 0.3s ease;">
+        <div class="media-card-thumb" style="background: linear-gradient(135deg, #164E33, #0A2F1D); height: 150px; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" style="width: 40px; height: 40px;"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        </div>
+        <div class="media-card-info" style="padding: 1rem;">
+          <h4 style="font-size: 0.95rem; margin-bottom: 0.5rem;">Floor Plans CAD</h4>
+          <p style="font-size: 0.8rem; color: var(--text-muted);">ZIP • 8.5 MB</p>
+        </div>
+      </div>
+
+      <div class="media-card" style="cursor: pointer; transition: all 0.3s ease;">
+        <div class="media-card-thumb" style="background: linear-gradient(135deg, #8A9D94, #5A7A70); height: 150px; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" style="width: 40px; height: 40px;"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        </div>
+        <div class="media-card-info" style="padding: 1rem;">
+          <h4 style="font-size: 0.95rem; margin-bottom: 0.5rem;">3D Renders Package</h4>
+          <p style="font-size: 0.8rem; color: var(--text-muted);">ZIP • 45 MB</p>
+        </div>
+      </div>
+
+      <div class="media-card" style="cursor: pointer; transition: all 0.3s ease;">
+        <div class="media-card-thumb" style="background: linear-gradient(135deg, #F3D372, #E5C158); height: 150px; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" style="width: 40px; height: 40px;"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        </div>
+        <div class="media-card-info" style="padding: 1rem;">
+          <h4 style="font-size: 0.95rem; margin-bottom: 0.5rem;">Marketing Presentations</h4>
+          <p style="font-size: 0.8rem; color: var(--text-muted);">PPTX • 15 MB</p>
+        </div>
+      </div>
+
+      <div class="media-card" style="cursor: pointer; transition: all 0.3s ease;">
+        <div class="media-card-thumb" style="background: linear-gradient(135deg, #0A2F1D, #164E33); height: 150px; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" style="width: 40px; height: 40px;"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        </div>
+        <div class="media-card-info" style="padding: 1rem;">
+          <h4 style="font-size: 0.95rem; margin-bottom: 0.5rem;">Specification Sheets</h4>
+          <p style="font-size: 0.8rem; color: var(--text-muted);">PDF • 6 MB</p>
+        </div>
+      </div>
+
+      <div class="media-card" style="cursor: pointer; transition: all 0.3s ease;">
+        <div class="media-card-thumb" style="background: linear-gradient(135deg, #070F0B, #1E2E26); height: 150px; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" style="width: 40px; height: 40px;"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        </div>
+        <div class="media-card-info" style="padding: 1rem;">
+          <h4 style="font-size: 0.95rem; margin-bottom: 0.5rem;">Video Commercials</h4>
+          <p style="font-size: 0.8rem; color: var(--text-muted);">MP4 • 120 MB</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="media-download-footer">
+      <div class="download-progress-bar-wrapper" id="download-progress-wrapper" style="display: none;">
+        <div class="download-progress-label">Compiling White-Label ZIP Package... <span id="download-progress-pct">0%</span></div>
+        <div class="download-bar-bg">
+          <div class="download-bar-fill" id="download-bar-fill"></div>
+        </div>
+      </div>
+      <button class="btn btn-primary" id="download-selected-btn" style="width: 100%;">Download Selected Assets</button>
+    </div>
+  </div>
+</section>

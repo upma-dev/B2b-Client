@@ -1,7 +1,7 @@
 {
-  "name": "aura-palmier-developments",
+  "name": "urban-lease",
   "version": "1.0.0",
-  "description": "A luxury animated responsive showcase website for Palmier Developments redesign.",
+  "description": "Urban Lease partner portal for leasing, brokerage analytics, and asset marketing.",
   "main": "index.html",
   "scripts": {
     "dev": "vite",
