@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AURA Palmier Developments | B2B Partner & Broker Portal</title>
+  <meta name="description" content="AURA Palmier Developments B2B Portal. Access broker commission tools, interactive ROI calculators, real-time construction progress milestones, and developer marketing resources.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-content">
+      <div class="preloader-logo">AURA B2B</div>
+      <div class="preloader-bar">
+        <div class="preloader-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header & Navigation -->
+  <header class="header" id="header">
+    <a href="#" class="logo">
+      AURA<span class="logo-accent">.</span><span style="font-size: 0.75rem; color: var(--text-muted); margin-left: 10px; font-weight: 500; font-family: var(--font-body); letter-spacing: 1.5px; text-transform: uppercase;">B2B Portal</span>
+    </a>
+    
+    <nav>
+      <ul class="nav-links" id="nav-links">
+        <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+        <li class="nav-item dropdown">
+          <a href="#projects" class="nav-link">Portfolio</a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-item">
+              <a href="#projects" onclick="showProjectDetails(0)">
+                <span class="dropdown-item-title">Vert Zayed</span>
+                <span class="dropdown-item-desc">Premium boutique villas in New Zayed</span>
+              </a>
+            </li>
+            <li class="dropdown-item">
+              <a href="#projects" onclick="showProjectDetails(1)">
+                <span class="dropdown-item-title">Zayard Villa</span>
+                <span class="dropdown-item-desc">Luxury standalone signature homes</span>
+              </a>
+            </li>
+            <li class="dropdown-item">
+              <a href="#projects" onclick="showProjectDetails(2)">
+                <span class="dropdown-item-title">Zayard Elite</span>
+                <span class="dropdown-item-desc">Exclusive state-of-the-art estates</span>
+              </a>
+            </li>
+            <li class="dropdown-item">
+              <a href="#projects" onclick="showProjectDetails(3)">
+                <span class="dropdown-item-title">Zayard Residence</span>
+                <span class="dropdown-item-desc">Elegant contemporary apartments</span>
+              </a>
+            </li>
+            <li class="dropdown-item">
+              <a href="#projects" onclick="showProjectDetails(4)">
+                <span class="dropdown-item-title">Zayard Avenue</span>
+                <span class="dropdown-item-desc">Premium mixed-use retail & housing</span>
+              </a>
+            </li>
+            <li class="dropdown-item">
+              <a href="#projects" onclick="showProjectDetails(5)">
+                <span class="dropdown-item-title">Zayard North Strike</span>
+                <span class="dropdown-item-desc">Magnificent coastal luxury living</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="#calculator" class="nav-link">B2B Yields</a></li>
+        <li class="nav-item"><a href="#progress" class="nav-link">Progress Tracker</a></li>
+        <li class="nav-item"><a href="#media-center" class="nav-link">Media Kits</a></li>
+        <li class="nav-item"><a href="#contact" class="nav-link">JV Partners</a></li>
+        <li class="nav-item">
+          <a href="#contact" class="btn btn-primary" style="padding: 8px 20px; font-size: 0.75rem;">Register Agency</a>
+        </li>
+      </ul>
+    </nav>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <!-- Hero Section (B2B Refocused) -->
+  <section class="hero" id="home">
+    <div class="hero-slider" id="hero-slider">
+      
+      <!-- Slide 1: Slides Left to Right -->
+      <div class="hero-slide active">
+        <div class="hero-slide-bg slide-left" style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80');"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content-wrapper">
+          <div class="hero-subtitle">Institutional Real Estate Development</div>
+          <h1 class="hero-title">High-Yield Joint Ventures & Broker Networks</h1>
+          <div class="hero-buttons">
+            <a href="#calculator" class="btn btn-primary">Calculate Commission</a>
+            <div class="play-btn-wrapper" id="open-video-btn">
+              <div class="play-circle">
+                <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+              <span class="play-text">Corporate Presentation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2: Slides Top to Down -->
+      <div class="hero-slide">
+        <div class="hero-slide-bg slide-top" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80');"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content-wrapper">
+          <div class="hero-subtitle">High-End Residential Portfolios</div>
+          <h1 class="hero-title">Exclusive Land Bank Opportunities in Sheikh Zayed</h1>
+          <div class="hero-buttons">
+            <a href="#contact" class="btn btn-primary">Submit JV Proposal</a>
+            <div class="play-btn-wrapper" id="open-video-btn-2">
+              <div class="play-circle">
+                <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+              <span class="play-text">Zayed Expansion Plan</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3: Slides Right to Left -->
+      <div class="hero-slide">
+        <div class="hero-slide-bg slide-right" style="background-image: url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1920&q=80');"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content-wrapper">
+          <div class="hero-subtitle">Seamless Marketing Support</div>
+          <h1 class="hero-title">White-Label Digital Assets & CAD Floorplans</h1>
+          <div class="hero-buttons">
+            <a href="#media-center" class="btn btn-primary">Broker Media Center</a>
+            <div class="play-btn-wrapper" id="open-video-btn-3">
+              <div class="play-circle">
+                <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+              <span class="play-text">Broker Portal Tutorial</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Dots navigation -->
+    <div class="slider-dots" id="slider-dots">
+      <div class="slider-dot active" data-slide="0"></div>
+      <div class="slider-dot" data-slide="1"></div>
+      <div class="slider-dot" data-slide="2"></div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator">
+      <div class="mouse-icon">
+        <div class="mouse-wheel"></div>
+      </div>
+      <span>Scroll Down</span>
+    </div>
+  </section>
+
+  <!-- Stats Counter Section (B2B Refocused) -->
+  <section class="section bg-darker home-only-section" id="home-stats">
+    <div class="stats-grid">
+      <div class="stat-card reveal-item">
+        <div class="stat-number" data-target="15">0</div>
+        <div class="stat-label">Years Developer Track Record</div>
+      </div>
+      <div class="stat-card reveal-item">
+        <div class="stat-number" data-target="240">0</div>
+        <div class="stat-label">Acres Premium Land Bank</div>
+      </div>
+      <div class="stat-card reveal-item">
+        <div class="stat-number" data-target="85">0</div>
+        <div class="stat-label">% Institutional Re-investment</div>
+      </div>
+      <div class="stat-card reveal-item">
+        <div class="stat-number" data-target="450">0</div>
+        <div class="stat-label">Registered Broker Agencies</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Showcase Section -->
+  <section class="section bg-lighter" id="projects">
+    <div class="section-title reveal-item">
+      <p>Developer Holdings</p>
+      <h2>Corporate Investment Portfolio</h2>
+      <div class="divider"></div>
+    </div>
+
+    <div class="projects-container">
+      <div class="projects-slider-wrapper">
+        <div class="projects-track" id="projects-track">
+          
+          <!-- Project Card 1 -->
+          <div class="project-card reveal-item" onclick="showProjectDetails(0)">
+            <div class="project-card-bg" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=500&q=80');"></div>
+            <div class="project-card-overlay"></div>
+            <div class="project-card-content">
+              <div class="project-location">New Zayed</div>
+              <h3 class="project-name">Vert Zayed</h3>
+              <p class="project-excerpt">Boutique luxury green residential development tailored for premium family settings, featuring signature architecture and lush gardens.</p>
+              <div class="project-arrow">
+                <span>Invest Details</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Card 2 -->
+          <div class="project-card reveal-item" onclick="showProjectDetails(1)">
+            <div class="project-card-bg" style="background-image: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=500&q=80');"></div>
+            <div class="project-card-overlay"></div>
+            <div class="project-card-content">
+              <div class="project-location">New Zayed</div>
+              <h3 class="project-name">Zayard Villa</h3>
+              <p class="project-excerpt">Signature standalone smart homes with private swimming pools, architectural green terraces, and elegant double-height lounges.</p>
+              <div class="project-arrow">
+                <span>Invest Details</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Card 3 -->
+          <div class="project-card reveal-item" onclick="showProjectDetails(2)">
+            <div class="project-card-bg" style="background-image: url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=500&q=80');"></div>
+            <div class="project-card-overlay"></div>
+            <div class="project-card-content">
+              <div class="project-location">New Zayed</div>
+              <h3 class="project-name">Zayard Elite</h3>
+              <p class="project-excerpt">High-end limited edition estates providing ultimate levels of privacy, smart home infrastructure, and sprawling private gardens.</p>
+              <div class="project-arrow">
+                <span>Invest Details</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Card 4 -->
+          <div class="project-card reveal-item" onclick="showProjectDetails(3)">
+            <div class="project-card-bg" style="background-image: url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=500&q=80');"></div>
+            <div class="project-card-overlay"></div>
+            <div class="project-card-content">
+              <div class="project-location">New Zayed</div>
+              <h3 class="project-name">Zayard Residence</h3>
+              <p class="project-excerpt">Elegantly engineered low-rise apartments surrounded by green parks, cycling trails, and fully featured clubhouse facilities.</p>
+              <div class="project-arrow">
+                <span>Invest Details</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Card 5 -->
+          <div class="project-card reveal-item" onclick="showProjectDetails(4)">
+            <div class="project-card-bg" style="background-image: url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=500&q=80');"></div>
+            <div class="project-card-overlay"></div>
+            <div class="project-card-content">
+              <div class="project-location">New Zayed</div>
+              <h3 class="project-name">Zayard Avenue</h3>
+              <p class="project-excerpt">A premium shopping and living destination along Sheikh Zayed's main avenue corridors, featuring world-class shopping brands.</p>
+              <div class="project-arrow">
+                <span>Invest Details</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Card 6 -->
+          <div class="project-card reveal-item" onclick="showProjectDetails(5)">
+            <div class="project-card-bg" style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=500&q=80');"></div>
+            <div class="project-card-overlay"></div>
+            <div class="project-card-content">
+              <div class="project-location">North Coast</div>
+              <h3 class="project-name">Zayard North Strike</h3>
+              <p class="project-excerpt">An absolute oceanfront community offering beachside villas, infinity water bodies, and pristine summer residences.</p>
+              <div class="project-arrow">
+                <span>Invest Details</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="projects-nav">
+        <button class="nav-arrow" id="project-prev" aria-label="Previous project">
+          <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+        </button>
+        <button class="nav-arrow" id="project-next" aria-label="Next project">
+          <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Broker Yield & Commission Calculator -->
+  <section class="section bg-darker" id="calculator">
+    <div class="section-title reveal-item">
+      <p>Brokerage Projections</p>
+      <h2>Brokerage Commissions & Sales Calculator</h2>
+      <div class="divider"></div>
+    </div>
+
+    <div class="calculator-grid glass-panel reveal-item">
+      <div class="calculator-sliders">
+        <h3>Adjust Partnership Metrics</h3>
+        <p style="color: var(--text-muted); margin-bottom: 2rem;">Adjust the projected broker sales volume and commission agreements to see payouts and annual yield metrics calculated in real-time.</p>
+        
+        <div class="slider-group">
+          <div class="slider-labels">
+            <span class="slider-title">Projected Annual Sales Volume</span>
+            <span class="slider-value-display" id="volume-val">EGP 25,000,000</span>
+          </div>
+          <input type="range" id="volume-range" min="5000000" max="100000000" step="5000000" value="25000000" class="b2b-range-slider">
+          <div class="range-limits">
+            <span>EGP 5M</span>
+            <span>EGP 100M</span>
+          </div>
+        </div>
+
+        <div class="slider-group" style="margin-top: 2rem;">
+          <div class="slider-labels">
+            <span class="slider-title">Agreed Commission Tier</span>
+            <span class="slider-value-display" id="commission-val">2.5%</span>
+          </div>
+          <input type="range" id="commission-range" min="1.5" max="5.0" step="0.1" value="2.5" class="b2b-range-slider">
+          <div class="range-limits">
+            <span>1.5%</span>
+            <span>5.0%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="calculator-results">
+        <div class="radial-chart-wrapper">
+          <svg class="radial-svg" viewBox="0 0 160 160">
+            <circle class="radial-bg" cx="80" cy="80" r="70"></circle>
+            <circle class="radial-bar" id="radial-progress" cx="80" cy="80" r="70"></circle>
+          </svg>
+          <div class="radial-content">
+            <span class="radial-label">Projected Payout</span>
+            <span class="radial-number" id="payout-val">EGP 625K</span>
+          </div>
+        </div>
+
+        <div class="results-meta">
+          <div class="meta-item">
+            <span class="meta-label">Commission Bracket</span>
+            <span class="meta-value" id="bracket-val" style="color: var(--accent);">Silver Tier</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Est. Marketing Rebate</span>
+            <span class="meta-value" id="rebate-val">EGP 50,000</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Construction Progress Timeline Section -->
+  <section class="section bg-lighter" id="progress">
+    <div class="section-title reveal-item">
+      <p>Execution Transparency</p>
+      <h2>Construction Progress Milestones</h2>
+      <div class="divider"></div>
+    </div>
+
+    <div class="progress-section-container reveal-item">
+      <!-- Selector for different projects progress -->
+      <div class="progress-project-tabs">
+        <div class="progress-tab active" data-proj="0">Vert Zayed Construction</div>
+        <div class="progress-tab" data-proj="1">Zayard Villa Construction</div>
+        <div class="progress-tab" data-proj="2">Zayard Residence Construction</div>
+      </div>
+
+      <div class="progress-detail-layout glass-panel">
+        <div class="progress-info-side">
+          <h3 id="progress-project-name">Vert Zayed Progress</h3>
+          <p id="progress-project-desc" style="color: var(--text-muted); margin-bottom: 2rem;">Timeline of structural, concrete, and finishing stages of the Vert boutique community. Audited quarterly for institutional partners.</p>
+          
+          <div class="overall-progress-bar">
+            <div class="overall-progress-labels">
+              <span>Overall Completion Status</span>
+              <span id="overall-percentage" style="color: var(--accent); font-weight: bold;">72%</span>
+            </div>
+            <div class="bar-bg">
+              <div class="bar-fill" id="overall-bar-fill" style="width: 72%;"></div>
+            </div>
+          </div>
+
+          <div class="timeline-nodes-container" id="timeline-nodes-list">
+            <!-- Dynamically populated timeline nodes -->
+          </div>
+        </div>
+
+        <div class="progress-image-side">
+          <div class="progress-image-wrapper">
+            <img id="progress-photo" src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&q=80" alt="Construction Site" class="progress-photo-img">
+            <div class="progress-photo-overlay">
+              <span id="progress-photo-caption">Concrete structural skeleton pouring in zone B</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive B2B Broker Media Center Dashboard -->
+  <section class="section bg-darker" id="media-center">
+    <div class="section-title reveal-item">
+      <p>White-Label Resources</p>
+      <h2>B2B Broker Media Center</h2>
+      <div class="divider"></div>
+    </div>
+
+    <div class="media-center-container glass-panel reveal-item">
+      <div class="media-controls">
+        <div class="search-input-wrapper">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="search-icon"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" id="asset-search" class="media-search-field" placeholder="Search brochures, plans, renders...">
+        </div>
+        <select id="asset-filter" class="media-select-field">
+          <option value="all">All Properties</option>
+          <option value="vert">Vert Zayed</option>
+          <option value="villa">Zayard Villa</option>
+          <option value="elite">Zayard Elite</option>
+          <option value="residence">Zayard Residence</option>
+          <option value="strike">Zayard North Strike</option>
+        </select>
+      </div>
+
+      <div class="media-grid-header">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <input type="checkbox" id="select-all-assets" class="b2b-checkbox">
+          <span>Select All Files</span>
+        </div>
+        <span id="selected-count-label" style="color: var(--text-muted); font-size: 0.85rem;">0 files selected</span>
+      </div>
+
+      <div class="media-asset-grid" id="media-asset-grid">
+        <!-- Dynamically generated asset cards -->
+      </div>
+
+      <div class="media-download-footer">
+        <div class="download-progress-bar-wrapper" id="download-progress-wrapper" style="display: none;">
+          <div class="download-progress-label">Compiling White-Label ZIP Package... <span id="download-progress-pct">0%</span></div>
+          <div class="download-bar-bg">
+            <div class="download-bar-fill" id="download-bar-fill"></div>
+          </div>
+        </div>
+        <button class="btn btn-primary" id="download-selected-btn">Download Selected Assets</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Floor Plan Section -->
+  <section class="section bg-lighter" id="floorplans">
+    <div class="section-title reveal-item">
+      <p>Architectural Layouts</p>
+      <h2>Virtual Floor Plans</h2>
+      <div class="divider"></div>
+    </div>
+
+    <div class="floorplan-section">
+      <div class="floorplan-tabs">
+        <div class="floorplan-tab active" data-tab="villa-a">Signature Villa Type A</div>
+        <div class="floorplan-tab" data-tab="villa-b">Elite Standalone Villa</div>
+        <div class="floorplan-tab" data-tab="penthouse">Luxury Penthouse Suite</div>
+      </div>
+
+      <!-- Tab 1: Signature Villa A -->
+      <div class="floorplan-display active" id="villa-a">
+        <div class="floorplan-details">
+          <h3>Signature Villa Type A</h3>
+          <p style="color: var(--text-muted); margin-bottom: 2rem;">Designed for sprawling families requiring abundant indoor-outdoor integration. High double-height ceilings provide majestic space, light and botanical garden ventilation.</p>
+          <div class="floorplan-features">
+            <div class="feature-item">
+              <span class="feature-label">Total Area</span>
+              <span class="feature-value">385 Sqm</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-label">Bedrooms</span>
+              <span class="feature-value">5 Master Beds</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-label">Bathrooms</span>
+              <span class="feature-value">6 Luxury Baths</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-label">Private Pool</span>
+              <span class="feature-value">Yes (9m x 4m)</span>
+            </div>
+          </div>
+          <a href="#contact" class="btn btn-outline">Request CAD Files</a>
+        </div>
+        <div class="floorplan-image-wrapper">
+          <svg class="floorplan-img" viewBox="0 0 400 300" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="20" y="20" width="360" height="260" rx="3" stroke-width="2"/>
+            <line x1="140" y1="20" x2="140" y2="280" />
+            <line x1="20" y1="150" x2="140" y2="150" />
+            <line x1="140" y1="180" x2="380" y2="180" />
+            <text x="40" y="80" fill="currentColor" font-size="10" letter-spacing="1">MASTER BEDROOM</text>
+            <text x="40" y="220" fill="currentColor" font-size="10" letter-spacing="1">KITCHEN / DINING</text>
+            <text x="230" y="100" fill="currentColor" font-size="10" letter-spacing="1">GRAND LOUNGE</text>
+            <text x="230" y="240" fill="currentColor" font-size="10" letter-spacing="1">OUTDOOR POOL DECK</text>
+            <rect x="200" y="205" width="150" height="50" fill="rgba(229, 193, 88, 0.1)" stroke-dasharray="4"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Tab 2: Elite Standalone Villa -->
+      <div class="floorplan-display" id="villa-b">
+        <div class="floorplan-details">
+          <h3>Elite Standalone Villa</h3>
+          <p style="color: var(--text-muted); margin-bottom: 2rem;">A magnificent multi-generational estate. Features an extensive private guest annex, smart rooftop lounge, and separate driver/nanny rooms.</p>
+          <div class="floorplan-features">
+            <div class="feature-item">
+              <span class="feature-label">Total Area</span>
+              <span class="feature-value">520 Sqm</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-label">Bedrooms</span>
+              <span class="feature-value">6 Master Beds</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-label">Bathrooms</span>
+              <span class="feature-value">7 Luxury Baths</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-label">Garage Space</span>
+              <span class="feature-value">3 Luxury Cars</span>
+            </div>
+          </div>
+          <a href="#contact" class="btn btn-outline">Request CAD Files</a>
+        </div>
+        <div class="floorplan-image-wrapper">
+          <svg class="floorplan-img" viewBox="0 0 400 300" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="20" y="20" width="360" height="260" rx="3" stroke-width="2"/>
+            <line x1="180" y1="20" x2="180" y2="280" />
+            <line x1="180" y1="120" x2="380" y2="120" />
+            <line x1="20" y1="160" x2="180" y2="160" />
+            <text x="45" y="90" fill="currentColor" font-size="10" letter-spacing="1">GUEST SUITE</text>
+            <text x="45" y="220" fill="currentColor" font-size="10" letter-spacing="1">OFFICE / MAID</text>
+            <text x="240" y="70" fill="currentColor" font-size="10" letter-spacing="1">LIVING HALL</text>
+            <text x="240" y="200" fill="currentColor" font-size="10" letter-spacing="1">TRIPLE CAR PORT</text>
+            <rect x="220" y="165" width="120" height="70" fill="rgba(229, 193, 88, 0.1)" stroke-dasharray="4"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Tab 3: Luxury Penthouse -->
+      <div class="floorplan-display" id="penthouse">
+        <div class="floorplan-details">
+          <h3>Luxury Penthouse Suite</h3>
+          <p style="color: var(--text-muted); margin-bottom: 2rem;">Occupying entire top levels of residential blocks. Overlooks New Zayed with 360-degree panorama glass walls and a bespoke rooftop sky terrace.</p>
+          <div class="floorplan-features">
+            <div class="feature-item">
+              <span class="feature-label">Total Area</span>
+              <span class="feature-value">265 Sqm</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-label">Bedrooms</span>
+              <span class="feature-value">3 Master Beds</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-label">Bathrooms</span>
+              <span class="feature-value">4 Luxury Baths</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-label">Rooftop Terrace</span>
+              <span class="feature-value">80 Sqm Area</span>
+            </div>
+          </div>
+          <a href="#contact" class="btn btn-outline">Request CAD Files</a>
+        </div>
+        <div class="floorplan-image-wrapper">
+          <svg class="floorplan-img" viewBox="0 0 400 300" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="20" y="20" width="360" height="260" rx="3" stroke-width="2"/>
+            <line x1="200" y1="20" x2="200" y2="280" />
+            <line x1="200" y1="140" x2="380" y2="140" />
+            <line x1="20" y1="140" x2="200" y2="140" />
+            <text x="50" y="80" fill="currentColor" font-size="10" letter-spacing="1">MASTER RETREAT</text>
+            <text x="50" y="210" fill="currentColor" font-size="10" letter-spacing="1">OPEN CONCEPT LIVING</text>
+            <text x="250" y="80" fill="currentColor" font-size="10" letter-spacing="1">ROOFTOP GARDEN</text>
+            <text x="250" y="210" fill="currentColor" font-size="10" letter-spacing="1">SKY SPA / JACUZZI</text>
+            <circle cx="280" cy="230" r="18" fill="rgba(229, 193, 88, 0.1)" stroke-dasharray="4"/>
+          </svg>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- B2B Values Section -->
+  <section class="section bg-darker" id="vision">
+    <div class="section-title reveal-item">
+      <p>Strategic Philosophy</p>
+      <h2>Vision, Mission & Joint Ventures</h2>
+      <div class="divider"></div>
+    </div>
+
+    <div class="values-grid">
+      <div class="value-card reveal-item">
+        <div class="value-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"></path>
+            <circle cx="12" cy="12" r="3"></circle>
+          </svg>
+        </div>
+        <h3>Corporate Vision</h3>
+        <p>Expanding the real estate sector in Sheikh Zayed and the Egyptian Coast through scalable land banking, modular architecture designs, and high-liquidity investments.</p>
+      </div>
+
+      <div class="value-card reveal-item">
+        <div class="value-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+            <polyline points="2 17 12 22 22 17"></polyline>
+            <polyline points="2 12 12 17 22 12"></polyline>
+          </svg>
+        </div>
+        <h3>Co-Brokerage Mission</h3>
+        <p>Empowering third-party agency networks and independent consultants with white-label client brochures, fast commission clearances, and direct developer support pipelines.</p>
+      </div>
+
+      <div class="value-card reveal-item">
+        <div class="value-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
+        </div>
+        <h3>Land Joint Ventures</h3>
+        <p>Offering landlords structural equity opportunities. We merge prime land locations with our world-class engineering execution, maximizing mutual development yields.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="section bg-lighter" id="testimonials">
+    <div class="section-title reveal-item">
+      <p>Partner Reviews</p>
+      <h2>Corporate Endorsements</h2>
+      <div class="divider"></div>
+    </div>
+
+    <div class="testimonials-section">
+      <!-- Testimonial 1 -->
+      <div class="testimonial-slide active">
+        <div class="testimonial-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        </div>
+        <blockquote class="testimonial-quote">"Our brokerage network has partnered with Palmier on multiple projects. Their commission disbursement schedules are the fastest in Egypt's market, and their white-label B2B media center has significantly cut our marketing cycle time."</blockquote>
+        <div class="testimonial-client">
+          <span class="client-name">Sherif Abdel-Wahab</span>
+          <span class="client-role">Managing Director, Capital Brokerage Group</span>
+        </div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="testimonial-slide">
+        <div class="testimonial-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        </div>
+        <blockquote class="testimonial-quote">"We contributed our family land bank in New Zayed to a Joint Venture with AURA Palmier. The transparency throughout planning, municipal licensing, and concrete construction phases was unmatched. A highly rewarding JV model."</blockquote>
+        <div class="testimonial-client">
+          <span class="client-name">Dr. Moustafa El-Kady</span>
+          <span class="client-role">Land JV Partner, Zayard Elite Zone</span>
+        </div>
+      </div>
+
+      <!-- Testimonial Dots -->
+      <div class="testimonials-dots" id="testimonials-dots">
+        <span class="testimonials-dot active" data-index="0"></span>
+        <span class="testimonials-dot" data-index="1"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lead Form & Contact Section (B2B Refocused) -->
+  <section class="section bg-darker" id="contact">
+    <div class="contact-grid">
+      <div class="contact-info reveal-item">
+        <h3>Institutional & Agency Registration</h3>
+        <p>Interested in entering land development ventures or joining our certified agency broker network? Submit a structural B2B partnership proposal, and an executive director will respond shortly.</p>
+        
+        <div class="contact-details">
+          
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="contact-text">
+              <h4>B2B Advisory Desk</h4>
+              <p>Sheikh Zayed City, Giza, Egypt</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
+            <div class="contact-text">
+              <h4>Hotline Support Services</h4>
+              <p><a href="tel:+201103811855">+20 110 381 1855</a> &nbsp;|&nbsp; <a href="tel:16831"><strong>16831</strong></a></p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="lead-form-wrapper glass-panel reveal-item">
+        <div class="form-message" id="form-msg">Thank you! Your strategic partnership proposal was recorded. A member of our executive land acquisition team will contact you within 24 hours.</div>
+        <form id="leadForm" onsubmit="handleFormSubmit(event)">
+          <div class="form-group">
+            <input type="text" id="fullName" class="form-input" placeholder=" " required minlength="4">
+            <label for="fullName" class="form-label">Contact Executive Name *</label>
+          </div>
+          <div class="form-group">
+            <input type="text" id="companyName" class="form-input" placeholder=" " required minlength="4">
+            <label for="companyName" class="form-label">Agency / Corporation Name *</label>
+          </div>
+          <div class="form-group">
+            <input type="tel" id="phone" class="form-input" placeholder=" " required pattern="[0-9]{8,15}">
+            <label for="phone" class="form-label">Direct Phone Number *</label>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" class="form-input" placeholder=" " required>
+            <label for="email" class="form-label">Corporate Email *</label>
+          </div>
+          <div class="form-group">
+            <select id="partnershipSelect" class="form-input" style="background: var(--bg-dark); color: var(--text-white); border-bottom: 1px solid rgba(255,255,255,0.2);" required>
+              <option value="" disabled selected>Select Partnership Interest *</option>
+              <option value="broker">Certified Agency Registration</option>
+              <option value="jv">Land Owner Joint Venture Proposal</option>
+              <option value="investor">Institutional Investment Inquiry</option>
+              <option value="corporate">Corporate Bulk Buyer</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">Submit B2B Inquiry</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Popup Modal -->
+  <div class="video-modal" id="video-modal">
+    <div class="video-modal-container">
+      <button class="video-modal-close" id="close-video-btn">
+        <svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        Close
+      </button>
+      <div class="video-modal-iframe-wrapper">
+        <iframe id="video-iframe" src="" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-column">
+        <div class="footer-logo">AURA<span class="logo-accent">.</span></div>
+        <p class="footer-desc">Redefining institutional partnerships, land development joint ventures, and brokerage agency services in Egypt.</p>
+        <div class="social-links">
+          <a href="#" class="social-icon" aria-label="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.14H6.9v3.86h2.6v11.95h4.75V11.32h3.2l.32-3.86z"/></svg>
+          </a>
+          <a href="#" class="social-icon" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+          <a href="#" class="social-icon" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h3>Portal Map</h3>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#projects">Developer Portfolio</a></li>
+          <li><a href="#calculator">Yield & commission tools</a></li>
+          <li><a href="#progress">Construction Audits</a></li>
+          <li><a href="#media-center">Resource Center</a></li>
+          <li><a href="#contact">Contact Partnerships</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>Developer Portfolio</h3>
+        <ul class="footer-links">
+          <li><a href="#projects" onclick="showProjectDetails(0)">Vert Zayed</a></li>
+          <li><a href="#projects" onclick="showProjectDetails(1)">Zayard Villa</a></li>
+          <li><a href="#projects" onclick="showProjectDetails(2)">Zayard Elite</a></li>
+          <li><a href="#projects" onclick="showProjectDetails(3)">Zayard Residence</a></li>
+          <li><a href="#projects" onclick="showProjectDetails(4)">Zayard Avenue</a></li>
+          <li><a href="#projects" onclick="showProjectDetails(5)">Zayard North Strike</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>Broker Hotline</h3>
+        <ul class="footer-links" style="color: var(--text-muted);">
+          <li style="margin-bottom: 10px;">Hotline Broker Support: <br><a href="tel:16831" style="font-size: 1.2rem; color: var(--accent); font-weight: bold;">16831</a></li>
+          <li>Partner Desk: <br><a href="tel:+201103811855" style="color: var(--text-white);">+20 110 381 1855</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 AURA Palmier Developments. B2B Agency & Partner Portal. All rights reserved.</p>
+      <div class="footer-policy-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="anchor-scroll.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
